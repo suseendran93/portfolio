@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500&display=swap');
+
+.App {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Noto Sans Mono', monospace;
+  font-weight: 500;
+  background: linear-gradient(90deg, rgba(210,209,217,1) 0%, rgba(227,227,238,1) 38%,
+   rgba(156,169,172,1) 100%);
+}
+
+.App-dark{
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Noto Sans Mono', monospace;
+  font-weight: 500;
+  background: linear-gradient(90deg, rgb(13 13 14) 0%, rgb(45 45 50) 38%, rgb(13 15 16) 100%);
+}
+
+.contact-img-dark{
+  filter: invert(0.5);
+}
+
+/* .carousel-control-prev, .carousel-control-next{
+  filter:invert(1);
+} */
+.white-content {
+  background: #e4e4e4;
+}
+.card-title{
+  font-size: 2rem !important;
+}
+.hero{
+  background-color: rgba(33,37,41,1)!important;
+  padding: 1rem 0;
+}
+.hero ul{
+  margin: 0;
+}
+.hero ul li{
+  list-style: none;
+  display: inline;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.55);
+ }
+
+
+ .hero ul li:active
+ {
+  color: #fff;
+ }
+ 
+ .bio{
+  text-align: justify;
+  line-height: 1.5;
+ }
+
+ .work-item{
+  width: 80%;
+  margin: auto;
+ }
+ .work-accomplishments{
+  font-size: 0.60rem;
+  text-align: justify;
+}
+.education-accomplishments{
+  font-size: 0.60rem;
+  text-align: center;
+}
+@media all and (min-width:500px){
+
+  
+  .card-title{
+    font-size: 3rem !important;
+  }
+
+  .work-accomplishments{
+    font-size: 0.75rem;
+    
+  }
+  .education-accomplishments{
+    font-size: 0.75rem;
+    
+  }
+  }
+@media all and (min-width:750px){
+  .bio{
+    line-height: 2;
+   }
+
+  .skills-images{
+    width: 100px;
+    height: 100px;
+  }
+  
+  .work-accomplishments{
+    font-size: 0.8rem;
+  }
+  .education-accomplishments{
+    font-size: 0.8rem;
+  }
+} 
+
+.card-style{
+  margin: 1em auto;
+  height: auto;
+}
+
+.card-style-dark{
+  margin: 1em auto;
+  height: auto;
+  background-color: black !important;
+  color:rgba(255, 255, 255, 0.55);
+}
+
+
+
+.image-grayscale{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%)
+}
+
+/* .navbar{
+
+  background: linear-gradient(90deg, rgba(210,209,217,1) 0%, rgba(30,30,31,1) 0%, rgba(156,169,172,1) 100%);
+  box-shadow: 0px 14px 37px -8px rgba(0,0,0,0.76);
+}
+
+.navbar .nav-link{
+  color: white;
+}
+.navbar .nav-link:hover
+{
+  color: grey;
+} */
+
+.skill-card{
+  cursor: pointer;
+  transition: opacity 1s,border-radius 0.5s,transform 1s;
+}
+.skill-card:hover{
+
+box-shadow: 0 0 2px 2px rgba(156,169,172,1);
+border-radius:50%;
+transform: scale(1.2);
+opacity: 0.25;
+}
+
+.skill-percent{
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 30%;
+  left: 45%;
+  font-size: 32px;
+  font-weight: 800;
+  transition: opacity 1s;
+}
+.skill-card:hover + .skill-percent{
+  opacity:1;
+}
