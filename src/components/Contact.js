@@ -12,7 +12,7 @@ const Contact = ({ theme }) => {
   const contactItems = [
     {
       icon: mobile,
-      desc: "(+353)892187902",
+      desc: "(+91)9551459935",
     },
     {
       icon: email,
