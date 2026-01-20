@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
-import { Card, Col, Container, Row, Image } from "react-bootstrap";
-import mobile from "../assets/mobile-phone-icon.svg";
-import email from "../assets/email-icon.svg";
-import linkedin from "../assets/linkedin-square-icon.svg";
-import github from "../assets/github.svg";
+import { Card, Col, Container, Row } from "react-bootstrap";
+import { FaMobileAlt, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import ThemeContext from "../context/ThemeContext";
 
 const Contact = ({ theme }) => {
@@ -11,29 +8,31 @@ const Contact = ({ theme }) => {
 
   const contactItems = [
     {
-      icon: mobile,
+      icon: <FaMobileAlt size={50} />,
       desc: "(+91)9551459935",
     },
     {
-      icon: email,
+      icon: <FaEnvelope size={50} />,
       desc: "suzeendran@gmail.com",
     },
+    {
+      icon: <FaLinkedin size={50} color={`${items.theme ? "#fff" : "#000"}`}/>,
+      desc: "Suseendran K",
+      href: "https://www.linkedin.com/in/suseendran-k-02101993/"
+    },
+    {
+      icon: <FaGithub size={50} color={`${items.theme ? "#fff" : "#000"}`}/>,
+      desc: "suseendran93",
+      href: "https://github.com/suseendran93"
+    }
   ];
 
   const contactItemMap = contactItems.map((item) => {
     return (
       <>
         <Col md={4} lg={3}>
-          <div>
-            <Image
-              className={`contact-images ${
-                items.theme ? "contact-img-dark" : ""
-              }`}
-              alt="js-img"
-              width={64}
-              height={64}
-              src={item.icon}
-            />
+          <div className={`contact-icon ${items.theme ? "contact-icon-dark" : ""}`}>
+            {item.href ? <a href={item.href} target="_blank" rel="noreferrer">{item.icon}</a> : item.icon}
             <p className="mt-1 text-muted">{item.desc}</p>
           </div>
         </Col>
@@ -51,48 +50,6 @@ const Contact = ({ theme }) => {
                 <Row className="justify-content-center">
                   <>
                     {contactItemMap}
-                    <Col md={4} lg={3}>
-                      <div>
-                        <a
-                          href="https://www.linkedin.com/in/suseendran-k-02101993/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <Image
-                            className={`contact-images ${
-                              items.theme ? "contact-img-dark" : ""
-                            }`}
-                            alt="js-img"
-                            width={64}
-                            height={64}
-                            src={linkedin}
-                            style={{ cursor: "pointer" }}
-                          />
-                        </a>
-                        <p className="mt-1 text-muted">suseendran-k-02101993</p>
-                      </div>
-                    </Col>
-                    <Col md={4} lg={3}>
-                      <div>
-                        <a
-                          href="https://github.com/suseendran93"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <Image
-                            className={`contact-images ${
-                              items.theme ? "contact-img-dark" : ""
-                            }`}
-                            alt="js-img"
-                            width={64}
-                            height={64}
-                            src={github}
-                            style={{ cursor: "pointer" }}
-                          />
-                        </a>
-                        <p className="mt-1 text-muted">suseendran93</p>
-                      </div>
-                    </Col>
                   </>
                 </Row>
               </Card.Text>
