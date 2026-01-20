@@ -6,9 +6,9 @@ import Skills from "./Skills";
 import Work from "./Work";
 import Contact from "./Contact";
 import Education from "./Education";
-import ToggleButton from "react-bootstrap/ToggleButton";
-import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 import ThemeContext from "../context/ThemeContext";
+import { FaMoon, FaSun } from "react-icons/fa";
+
 
 const NavbarHeader = () => {
   const about = useRef(null);
@@ -17,11 +17,8 @@ const NavbarHeader = () => {
   const contact = useRef(null);
   const education = useRef(null);
 
-  const { theme, DarkTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const onThemeChange = () => {
-    DarkTheme(!theme);
-  };
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
@@ -92,20 +89,17 @@ const NavbarHeader = () => {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          <ToggleButtonGroup
-            type="radio"
-            name="options"
-            defaultValue={1}
-            onChange={onThemeChange}
-            style={{ border: "1px solid white" }}
-          >
-            <ToggleButton id="tbg-radio-1" value={1} variant="light">
-              {/* Dark */}
-            </ToggleButton>
-            <ToggleButton id="tbg-radio-2" value={2} variant="outline-dark">
-              {/* Light */}
-            </ToggleButton>
-          </ToggleButtonGroup>
+          
+            <nav>
+              {/* ...existing code... */}
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle"
+                aria-label="Toggle dark mode"
+              >
+                {theme ? <FaSun size={20} /> : <FaMoon size={20} />}
+              </button>
+            </nav>
         </Container>
       </Navbar>
       <div className="about" ref={about}>

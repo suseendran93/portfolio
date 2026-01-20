@@ -1,48 +1,28 @@
 import React from "react";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
-import js from "../assets/js.svg";
-import css from "../assets/css-icon.svg";
-import html from "../assets/html-icon.svg";
-import react from "../assets/react-js-icon.svg";
-import git from "../assets/git-icon.svg";
-import bootstrap from "../assets/bootstrap-5-logo-icon.svg";
-import nodejs from "../assets/nodejs-icon.svg";
-// import r from "../assets/r-programming-language-icon.svg";
-// import python from "../assets/python-programming-language-icon.svg";
-// import java from "../assets/java-programming-language-icon.svg";
-// import sql from "../assets/sql-icon.svg";
-import mongo from "../assets/mongodb-icon.svg";
-import vs from "../assets/visual-studio-code-icon.svg";
+import { IoLogoJavascript, IoLogoCss3, IoLogoHtml5, IoLogoReact, IoLogoGithub, IoLogoNodejs } from "react-icons/io5";
+import { FaBootstrap } from "react-icons/fa"
+import { DiMongodb } from "react-icons/di";
+import { VscVscode } from "react-icons/vsc";
+
 const Skills = ({ theme }) => {
   const skillImages = [
-    js,
-    css,
-    html,
-    react,
-    git,
-    bootstrap,
-    nodejs,
-    // r,
-    // python,
-    // java,
-    // sql,
-    mongo,
-    vs,
+    <IoLogoJavascript size={50}/>,
+    <IoLogoCss3 size={50}/>,
+    <IoLogoHtml5 size={50}/>,
+    <IoLogoReact size={50}/>,
+    <IoLogoGithub size={50}/>,
+    <IoLogoNodejs size={50}/>,
+    <FaBootstrap size={50}/>,
+    <DiMongodb size={50}/>,
+    <VscVscode size={50}/>,
   ];
 
   const skills = skillImages.map((item) => {
     return (
       <Col md={4} lg={4} className="p-2">
         <div className="d-none d-md-block" style={{ position: "relative" }}>
-          <Image
-            className="skills-images"
-            //  skill-card"
-            alt="js-img"
-            width={250}
-            height={250}
-            src={item}
-          />
-          {/* <div className="skill-percent">95%</div> */}
+          {item}
         </div>
         <div className="d-sm-block d-md-none">
           <Image
