@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import info from "../data/info.json";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import Skeleton from "./Skeleton/Skeleton";
 
 const About = ({ theme }) => {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data loading
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
+
 
   const [loading, setLoading] = useState(true);
 
