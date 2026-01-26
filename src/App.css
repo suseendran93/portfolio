@@ -550,6 +550,30 @@ body.dark-mode .portfolio-footer::before {
   transition: all 0.3s ease;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.navbar-collapse-custom {
+  justify-content: flex-start !important;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 body.dark-mode .custom-navbar {
   background: var(--bg-card-dark) !important;
   border-bottom: 1px solid var(--border-dark);

@@ -33,12 +33,12 @@ const NavbarHeader = () => {
   return (
     <>
       <Navbar collapseOnSelect expand="sm" fixed="top" className="custom-navbar" style={{ zIndex: 1030 }}>
-        <div className="d-flex justify-content-evenly align-items-center w-100">
-          <Container className="d-flex justify-content-center">
+        <div className="navbar-container">
+          <Container className="navbar-left">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse
               id="responsive-navbar-nav"
-              className="justify-content-center"
+              className="navbar-collapse-custom"
             >
               <Nav className="header-nav">
                 <Nav.Link
@@ -99,7 +99,7 @@ const NavbarHeader = () => {
 
           </Container>
 
-          <div>
+          <div className="navbar-right">
             <button
               onClick={toggleTheme}
               className="theme-toggle"
