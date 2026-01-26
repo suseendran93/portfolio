@@ -40,14 +40,14 @@ const Contact = ({ theme }) => {
     );
   });
   return (
-    <Container>
+    <Container style={{textAlign:"center"}}>
       <Row>
         <Col>
           <Card className={`card-style ${theme ? "card-style-dark" : ""}`}>
             <Card.Body>
               <Card.Title>Contact</Card.Title>
               <Card.Text className="mt-5">
-                <Row className="justify-content-center">
+                <Row className="justify-content-center" >
                   <>
                     {contactItemMap}
                   </>

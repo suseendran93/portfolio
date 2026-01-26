@@ -9,7 +9,7 @@ const Education = ({ theme }) => {
     setIndex(selectedIndex);
   };
   return (
-    <Container>
+    <Container style={{textAlign:"center"}}>
       <Row>
         <Col>
           <Card className={`card-style ${theme ? "card-style-dark" : ""}`}>

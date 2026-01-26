@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useContext, useEffect } from "react";
-import NavbarHeader from "./components/Navbar";
+import NavbarHeader from "./components/Navbar/Navbar";
 import ThemeContext from "./context/ThemeContext";
 import BackToTop from "./components/BackToTop/BackToTop";
 
