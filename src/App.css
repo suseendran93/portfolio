@@ -216,6 +216,15 @@ body.dark-mode .card-title {
 
 body.dark-mode .skill-card {
   background: rgba(255, 255, 255, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+body.dark-mode .skill-card {
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .skill-card:hover {
