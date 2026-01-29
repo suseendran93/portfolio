@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { PortfolioContext } from "../context/PortfolioContext";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { FaMobileAlt, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import ThemeContext from "../context/ThemeContext";
@@ -6,24 +7,26 @@ import ThemeContext from "../context/ThemeContext";
 const Contact = ({ theme }) => {
   const items = useContext(ThemeContext);
 
+  const { portfolioData } = useContext(PortfolioContext);
+
   const contactItems = [
     {
       icon: <FaMobileAlt size={50} />,
-      desc: "(+91)9551459935",
+      desc: portfolioData.contact.phone || "Phone",
     },
     {
       icon: <FaEnvelope size={50} />,
-      desc: "suzeendran@gmail.com",
+      desc: portfolioData.contact.email || "Email",
     },
     {
-      icon: <FaLinkedin size={50} color={`${items.theme ? "#fff" : "#000"}`}/>,
-      desc: "Suseendran K",
-      href: "https://www.linkedin.com/in/suseendran-k-02101993/"
+      icon: <FaLinkedin size={50} color={`${items.theme ? "#fff" : "#000"}`} />,
+      desc: "LinkedIn",
+      href: portfolioData.contact.linkedin
     },
     {
-      icon: <FaGithub size={50} color={`${items.theme ? "#fff" : "#000"}`}/>,
-      desc: "suseendran93",
-      href: "https://github.com/suseendran93"
+      icon: <FaGithub size={50} color={`${items.theme ? "#fff" : "#000"}`} />,
+      desc: "GitHub",
+      href: portfolioData.contact.github
     }
   ];
 
@@ -40,7 +43,7 @@ const Contact = ({ theme }) => {
     );
   });
   return (
-    <Container style={{textAlign:"center"}}>
+    <Container style={{ textAlign: "center" }}>
       <Row>
         <Col>
           <Card className={`card-style ${theme ? "card-style-dark" : ""}`}>

@@ -42,30 +42,30 @@ const NavbarHeader = () => {
             >
               <Nav className="header-nav">
                 <Nav.Link
-                  as={Link}
-                  to="/portfolio/about"
+                  href="#about"
                   eventKey="about"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     scrollToSection(about);
                   }}
                 >
                   <div style={{ padding: "0 2em" }}>About</div>
                 </Nav.Link>
                 <Nav.Link
-                  as={Link}
-                  to="/portfolio/education"
+                  href="#education"
                   eventKey="education"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     scrollToSection(education);
                   }}
                 >
                   <div style={{ padding: "0 2em" }}>Education</div>
                 </Nav.Link>
                 <Nav.Link
-                  as={Link}
-                  to="/portfolio/skills"
+                  href="#skills"
                   eventKey="skills"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     scrollToSection(skills);
                   }}
                 >
@@ -73,10 +73,10 @@ const NavbarHeader = () => {
                 </Nav.Link>
 
                 <Nav.Link
-                  as={Link}
-                  to="/portfolio/work"
+                  href="#work"
                   eventKey="work"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     scrollToSection(work);
                   }}
                 >
@@ -84,10 +84,10 @@ const NavbarHeader = () => {
                 </Nav.Link>
 
                 <Nav.Link
-                  as={Link}
-                  to="/portfolio/contact"
+                  href="#contact"
                   eventKey="contact"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     scrollToSection(contact);
                   }}
                 >

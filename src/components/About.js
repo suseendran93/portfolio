@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import info from "../data/info.json";
+import React, { useState, useEffect, useContext } from "react";
+import { PortfolioContext } from "../context/PortfolioContext";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import Skeleton from "./Skeleton/Skeleton";
 
 const About = ({ theme }) => {
-
-
+  const { portfolioData } = useContext(PortfolioContext);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,7 +30,7 @@ const About = ({ theme }) => {
                   <Col lg={12}>
                     <Card.Body>
                       <Card.Title>About Me</Card.Title>
-                      <Card.Text className="bio">{info.about}</Card.Text>
+                      <Card.Text className="bio">{portfolioData.about}</Card.Text>
                     </Card.Body>
                   </Col>
                 </Row>
