@@ -5,7 +5,7 @@ import ThemeContext from "./context/ThemeContext";
 import { PortfolioProvider } from "./context/PortfolioContext";
 import Login from "./components/Login/Login";
 import Builder from "./components/Builder/Builder";
-import PortfolioView from "./PortfolioView";
+import PortfolioView from "./pages/PortfolioView";
 
 const App = () => {
   const { theme } = useContext(ThemeContext);

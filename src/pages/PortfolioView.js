@@ -1,15 +1,15 @@
 import React, { useContext, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import NavbarHeader from "./components/Navbar/Navbar";
-import BackToTop from "./components/BackToTop/BackToTop";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Work from "./components/Work";
-import Contact from "./components/Contact";
-import Education from "./components/Education";
-import ThemeContext from "./context/ThemeContext";
-import { PortfolioContext } from "./context/PortfolioContext";
+import NavbarHeader from "../components/Navbar/Navbar";
+import BackToTop from "../components/BackToTop/BackToTop";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Work from "../components/Work";
+import Contact from "../components/Contact";
+import Education from "../components/Education";
+import ThemeContext from "../context/ThemeContext";
+import { PortfolioContext } from "../context/PortfolioContext";
 import { Button } from "react-bootstrap";
 
 const PortfolioView = () => {
@@ -45,6 +45,24 @@ const PortfolioView = () => {
             </div>
 
             <NavbarHeader />
+            <div id="home">
+                <Hero />
+            </div>
+            <div id="about">
+                <About />
+            </div>
+            <div id="education">
+                <Education />
+            </div>
+            <div id="work">
+                <Work />
+            </div>
+            <div id="skills">
+                <Skills />
+            </div>
+            <div id="contact">
+                <Contact />
+            </div>
             <BackToTop />
         </>
     );
